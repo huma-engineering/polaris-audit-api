@@ -11,6 +11,9 @@ jobs:
   test:
     name: Unit testing
     runs-on: ubuntu-latest
+    env:
+      DATABASE_HOST: localhost
+      DATABASE_PORT: 5432
     services:
       postgres:
         image: postgres:10.1-alpine
